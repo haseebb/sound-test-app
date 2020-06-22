@@ -1,0 +1,11 @@
+rootProject.name = 'SoundProject'
+include ':react-native-ducking-sound'
+project(':react-native-ducking-sound').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-ducking-sound/android')
+include ':react-native-tts'
+project(':react-native-tts').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-tts/android')
+include ':react-native-background-timer'
+project(':react-native-background-timer').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-background-timer/android')
+include ':react-native-sound'
+project(':react-native-sound').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-sound/android')
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'
